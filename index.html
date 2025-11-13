@@ -2,48 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Haven | Discover Your Next Favorite Book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book Haven · Online Bookstore</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="site-header">
-      <div class="container header-content">
-        <a class="logo" href="#">Book Haven</a>
-        <nav class="site-nav" aria-label="Main navigation">
-          <ul>
+      <div class="container header-bar">
+        <a class="logo" href="#hero">Book Haven</a>
+        <nav class="site-nav" aria-label="Primary">
+          <button class="nav-toggle" data-nav-toggle aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            ☰
+          </button>
+          <ul data-nav-menu>
             <li><a href="#featured">Featured</a></li>
             <li><a href="#categories">Categories</a></li>
             <li><a href="#best-sellers">Best Sellers</a></li>
             <li><a href="#newsletter">Newsletter</a></li>
           </ul>
         </nav>
-        <button class="cart-button" aria-label="Open shopping cart" data-cart-open>
-          <span class="cart-icon" aria-hidden="true">🛒</span>
-          <span class="cart-count" data-cart-count>0</span>
+        <button class="cart-trigger" data-cart-open aria-label="Open cart">
+          🛒 <span data-cart-count>0</span>
         </button>
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <section class="hero" id="hero">
-        <div class="container hero-content">
-          <div>
-            <h1>Discover Your Next Favorite Book</h1>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Independent Bookstore</p>
+            <h1>Discover your next unforgettable read</h1>
             <p>
-              From timeless classics to contemporary bestsellers, explore curated
-              collections tailored to every kind of reader.
+              Browse curated collections, exclusive signed editions, and staff
+              favorites – all delivered to your door.
             </p>
-            <form class="search" role="search" aria-label="Search for books">
-              <label class="sr-only" for="search-input">Search books</label>
+            <form class="search" role="search" aria-label="Search catalog">
+              <label class="sr-only" for="search">Search for books</label>
               <input
-                id="search-input"
+                id="search"
                 type="search"
                 placeholder="Search by title, author, or keyword"
                 data-search-input
@@ -51,46 +57,66 @@
               <button type="submit">Search</button>
             </form>
           </div>
-          <div class="hero-card">
-            <h2>Staff Pick</h2>
-            <p class="hero-card-title">"The Midnight Library" by Matt Haig</p>
-            <p>
-              A dazzling novel about the infinite choices that go into a life
-              well lived.
-            </p>
-            <button class="primary" type="button" data-add-to-cart data-book-id="midnight-library">
-              Add to Cart
+          <aside class="hero-highlight">
+            <h2>Staff pick</h2>
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1544937950-fa07a98d237f?auto=format&fit=crop&w=400&q=60"
+                alt="Cover art for The Midnight Library"
+              />
+              <figcaption>
+                <strong>The Midnight Library</strong>
+                <span>Matt Haig</span>
+              </figcaption>
+            </figure>
+            <button
+              class="primary"
+              type="button"
+              data-add-to-cart
+              data-book-id="midnight-library"
+            >
+              Add to cart
             </button>
-          </div>
+          </aside>
         </div>
       </section>
 
       <section class="featured" id="featured" aria-labelledby="featured-heading">
         <div class="container">
-          <h2 id="featured-heading">Featured Collections</h2>
+          <div class="section-heading">
+            <h2 id="featured-heading">Featured collections</h2>
+            <p>Fresh arrivals, limited editions, and stories our readers love.</p>
+          </div>
           <div class="grid" data-book-grid></div>
         </div>
       </section>
 
-      <section class="categories" id="categories" aria-labelledby="categories-heading">
+      <section
+        class="categories"
+        id="categories"
+        aria-labelledby="categories-heading"
+      >
         <div class="container">
-          <h2 id="categories-heading">Shop by Category</h2>
+          <div class="section-heading">
+            <h2 id="categories-heading">Shop by category</h2>
+            <p>Handpicked shelves for every type of reader.</p>
+          </div>
           <div class="category-grid">
             <article class="category-card">
               <h3>Fiction</h3>
-              <p>Captivating stories from award-winning authors worldwide.</p>
+              <p>Novel narratives, prize winners, and contemporary classics.</p>
             </article>
             <article class="category-card">
-              <h3>Non-Fiction</h3>
-              <p>Biographies, memoirs, and insightful explorations of our world.</p>
+              <h3>Non-fiction</h3>
+              <p>Memoirs, essays, and guides to inspire and inform.</p>
             </article>
             <article class="category-card">
-              <h3>Young Adult</h3>
-              <p>Coming-of-age tales filled with adventure, romance, and growth.</p>
+              <h3>Young readers</h3>
+              <p>Adventure, imagination, and bedtime favorites for all ages.</p>
             </article>
             <article class="category-card">
-              <h3>Science &amp; Tech</h3>
-              <p>Stay ahead with cutting-edge research and practical guides.</p>
+              <h3>Science &amp; tech</h3>
+              <p>Stay curious with popular science and practical know-how.</p>
             </article>
           </div>
         </div>
@@ -102,89 +128,114 @@
         aria-labelledby="best-sellers-heading"
       >
         <div class="container">
-          <h2 id="best-sellers-heading">This Week's Best Sellers</h2>
+          <div class="section-heading">
+            <h2 id="best-sellers-heading">This week's best sellers</h2>
+            <p>Readers can't get enough of these stories.</p>
+          </div>
           <div class="carousel" data-carousel>
-            <button class="carousel-control prev" data-carousel-prev aria-label="Scroll previous">‹</button>
+            <button
+              class="carousel-control prev"
+              type="button"
+              aria-label="Scroll previous"
+              data-carousel-prev
+            >
+              ‹
+            </button>
             <div class="carousel-track" data-carousel-track></div>
-            <button class="carousel-control next" data-carousel-next aria-label="Scroll next">›</button>
+            <button
+              class="carousel-control next"
+              type="button"
+              aria-label="Scroll next"
+              data-carousel-next
+            >
+              ›
+            </button>
           </div>
         </div>
       </section>
 
-      <section class="newsletter" id="newsletter" aria-labelledby="newsletter-heading">
-        <div class="container newsletter-content">
+      <section
+        class="newsletter"
+        id="newsletter"
+        aria-labelledby="newsletter-heading"
+      >
+        <div class="container newsletter-inner">
           <div>
-            <h2 id="newsletter-heading">Join Our Community</h2>
+            <p class="eyebrow">Stay in the loop</p>
+            <h2 id="newsletter-heading">Exclusive launches, events &amp; offers</h2>
             <p>
-              Be the first to know about new releases, exclusive deals, and
-              community events.
+              Subscribe for author Q&amp;As, book club picks, and early access to
+              signed copies.
             </p>
           </div>
           <form class="newsletter-form" aria-label="Newsletter signup">
-            <label class="sr-only" for="newsletter-email">Email</label>
+            <label class="sr-only" for="newsletter-email">Email address</label>
             <input
               id="newsletter-email"
               type="email"
               name="email"
-              placeholder="Enter your email"
               required
+              placeholder="you@example.com"
             />
-            <button type="submit">Subscribe</button>
+            <button type="submit">Join the list</button>
           </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-content">
+      <div class="container footer-grid">
         <div>
-          <a class="logo" href="#">Book Haven</a>
-          <p>Independent bookstore bringing stories to every reader since 1998.</p>
+          <a class="logo" href="#hero">Book Haven</a>
+          <p>Celebrating stories and community since 1998.</p>
         </div>
-        <div class="footer-links">
-          <div>
-            <h3>Support</h3>
-            <ul>
-              <li><a href="#">Shipping &amp; Returns</a></li>
-              <li><a href="#">Gift Cards</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3>Follow</h3>
-            <ul>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Goodreads</a></li>
-              <li><a href="#">Newsletter</a></li>
-            </ul>
-          </div>
+        <div>
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Shipping &amp; returns</a></li>
+            <li><a href="#">Gift cards</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Goodreads</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
         </div>
       </div>
-      <p class="container copyright">© <span data-current-year></span> Book Haven.</p>
+      <p class="copyright">
+        © <span data-current-year></span> Book Haven. All rights reserved.
+      </p>
     </footer>
 
-    <section class="cart" data-cart hidden aria-labelledby="cart-heading" role="dialog">
+    <section class="cart" data-cart hidden role="dialog" aria-modal="true">
       <div class="cart-backdrop" data-cart-close tabindex="-1"></div>
       <div class="cart-panel" role="document" tabindex="-1">
         <header class="cart-header">
-          <h2 id="cart-heading">Your Cart</h2>
-          <button class="icon-button" type="button" data-cart-close aria-label="Close cart">×</button>
+          <h2>Your cart</h2>
+          <button class="icon-button" type="button" data-cart-close>
+            <span class="sr-only">Close cart</span>
+            ×
+          </button>
         </header>
         <div class="cart-body" data-cart-items>
-          <p class="empty">Your cart is empty. Start adding your next read!</p>
+          <p class="empty">Your cart is empty. Start exploring!</p>
         </div>
         <footer class="cart-footer">
-          <div class="cart-summary">
+          <div class="totals">
             <span>Total</span>
-            <span class="cart-total" data-cart-total>$0.00</span>
+            <span data-cart-total>$0.00</span>
           </div>
           <button
-            class="primary checkout"
+            class="primary"
             type="button"
             data-checkout
             aria-haspopup="dialog"
-            aria-disabled="true"
             disabled
+            aria-disabled="true"
           >
             Checkout
           </button>
@@ -196,30 +247,27 @@
       class="payment"
       data-payment
       hidden
-      aria-labelledby="payment-heading"
       role="dialog"
+      aria-modal="true"
+      aria-labelledby="payment-title"
     >
       <div class="payment-backdrop" data-payment-close tabindex="-1"></div>
       <div class="payment-panel" role="document" tabindex="-1">
         <header class="payment-header">
-          <h2 id="payment-heading">Secure Checkout</h2>
-          <button
-            class="icon-button"
-            type="button"
-            data-payment-close
-            aria-label="Close payment"
-          >
+          <h2 id="payment-title">Secure checkout</h2>
+          <button class="icon-button" type="button" data-payment-close>
+            <span class="sr-only">Close payment</span>
             ×
           </button>
         </header>
-        <div class="payment-content">
+        <div class="payment-layout">
           <section class="payment-summary">
-            <h3>Order Summary</h3>
+            <h3>Order summary</h3>
             <ul class="payment-items" data-payment-items></ul>
             <p class="payment-empty" data-payment-empty>
-              Your cart is empty. Add books to begin checkout.
+              Nothing in your cart yet. Add a book to continue.
             </p>
-            <dl class="payment-totals" data-payment-totals>
+            <dl class="payment-totals" data-payment-totals hidden>
               <div>
                 <dt>Subtotal</dt>
                 <dd data-payment-subtotal>$0.00</dd>
@@ -235,67 +283,55 @@
             </dl>
           </section>
           <section class="payment-details">
-            <h3>Payment Method</h3>
-            <div
-              class="payment-methods"
-              role="tablist"
-              aria-label="Select payment method"
-            >
+            <h3>Payment method</h3>
+            <div class="payment-tabs" role="tablist" aria-label="Payment method">
               <button
+                class="tab active"
                 type="button"
-                class="payment-method active"
-                data-payment-method="card"
-                aria-selected="true"
                 role="tab"
-                id="payment-tab-card"
-                aria-controls="payment-panel-card"
-                tabindex="0"
+                aria-selected="true"
+                id="tab-card"
+                aria-controls="panel-card"
+                data-payment-method="card"
               >
-                Credit Card
+                Card
               </button>
               <button
+                class="tab"
                 type="button"
-                class="payment-method"
-                data-payment-method="paypal"
-                aria-selected="false"
                 role="tab"
-                id="payment-tab-paypal"
-                aria-controls="payment-panel-paypal"
+                aria-selected="false"
+                id="tab-paypal"
+                aria-controls="panel-paypal"
                 tabindex="-1"
+                data-payment-method="paypal"
               >
                 PayPal
               </button>
               <button
+                class="tab"
                 type="button"
-                class="payment-method"
-                data-payment-method="gift"
-                aria-selected="false"
                 role="tab"
-                id="payment-tab-gift"
-                aria-controls="payment-panel-gift"
+                aria-selected="false"
+                id="tab-gift"
+                aria-controls="panel-gift"
                 tabindex="-1"
+                data-payment-method="gift"
               >
-                Gift Card
+                Gift card
               </button>
             </div>
             <form class="payment-form" data-payment-form novalidate>
               <div
-                class="payment-method-panel"
-                data-method-panel="card"
-                id="payment-panel-card"
+                class="method-panel"
+                id="panel-card"
                 role="tabpanel"
-                aria-labelledby="payment-tab-card"
-                tabindex="0"
+                aria-labelledby="tab-card"
+                data-method-panel="card"
               >
                 <div class="field">
                   <label for="card-name">Name on card</label>
-                  <input
-                    id="card-name"
-                    type="text"
-                    autocomplete="cc-name"
-                    placeholder="Jane Doe"
-                    data-required
-                  />
+                  <input id="card-name" type="text" autocomplete="cc-name" required />
                 </div>
                 <div class="field">
                   <label for="card-number">Card number</label>
@@ -306,23 +342,23 @@
                     autocomplete="cc-number"
                     placeholder="1234 5678 9012 3456"
                     pattern="[0-9 ]{12,23}"
-                    data-required
+                    required
                   />
                 </div>
-                <div class="field field-group">
-                  <div>
+                <div class="field-inline">
+                  <div class="field">
                     <label for="card-expiry">Expiry</label>
                     <input
                       id="card-expiry"
                       type="text"
                       inputmode="numeric"
                       autocomplete="cc-exp"
-                    placeholder="MM/YY"
-                    pattern="^(0[1-9]|1[0-2])/[0-9]{2}$"
-                      data-required
+                      placeholder="MM/YY"
+                      pattern="^(0[1-9]|1[0-2])/[0-9]{2}$"
+                      required
                     />
                   </div>
-                  <div>
+                  <div class="field">
                     <label for="card-cvc">CVC</label>
                     <input
                       id="card-cvc"
@@ -331,60 +367,40 @@
                       autocomplete="cc-csc"
                       placeholder="123"
                       pattern="[0-9]{3,4}"
-                      data-required
+                      required
                     />
                   </div>
                 </div>
                 <div class="field">
                   <label for="card-email">Email receipt</label>
-                  <input
-                    id="card-email"
-                    type="email"
-                    autocomplete="email"
-                    placeholder="you@example.com"
-                    data-required
-                  />
+                  <input id="card-email" type="email" autocomplete="email" required />
                 </div>
               </div>
 
               <div
-                class="payment-method-panel"
-                data-method-panel="paypal"
-                id="payment-panel-paypal"
+                class="method-panel"
+                id="panel-paypal"
                 role="tabpanel"
-                aria-labelledby="payment-tab-paypal"
-                tabindex="-1"
+                aria-labelledby="tab-paypal"
+                data-method-panel="paypal"
                 hidden
               >
-                <p class="payment-note">
-                  You will be securely redirected to PayPal after confirming your
-                  email.
-                </p>
+                <p>You will be redirected to PayPal after confirming your email.</p>
                 <div class="field">
                   <label for="paypal-email">PayPal email</label>
-                  <input
-                    id="paypal-email"
-                    type="email"
-                    autocomplete="email"
-                    placeholder="name@email.com"
-                    data-required
-                  />
+                  <input id="paypal-email" type="email" autocomplete="email" required />
                 </div>
               </div>
 
               <div
-                class="payment-method-panel"
-                data-method-panel="gift"
-                id="payment-panel-gift"
+                class="method-panel"
+                id="panel-gift"
                 role="tabpanel"
-                aria-labelledby="payment-tab-gift"
-                tabindex="-1"
+                aria-labelledby="tab-gift"
+                data-method-panel="gift"
                 hidden
               >
-                <p class="payment-note">
-                  Redeem your Book Haven gift card below. Remaining balances carry
-                  over automatically.
-                </p>
+                <p>Redeem your Book Haven gift card balance instantly.</p>
                 <div class="field">
                   <label for="gift-number">Gift card number</label>
                   <input
@@ -393,7 +409,7 @@
                     inputmode="numeric"
                     placeholder="0000 0000 0000"
                     pattern="[0-9 ]{12,20}"
-                    data-required
+                    required
                   />
                 </div>
                 <div class="field">
@@ -404,12 +420,12 @@
                     inputmode="numeric"
                     placeholder="1234"
                     pattern="[0-9]{4}"
-                    data-required
+                    required
                   />
                 </div>
               </div>
 
-              <button type="submit" class="primary">Confirm payment</button>
+              <button class="primary" type="submit">Confirm payment</button>
             </form>
 
             <div
@@ -421,12 +437,11 @@
             >
               <h3>Payment confirmed!</h3>
               <p>
-                Thank you for your purchase. Your
-                <span data-payment-success-method>credit card</span> receipt has
-                been sent to your inbox.
+                Thank you for supporting independent bookstores. A receipt has
+                been sent to <span data-payment-success-method>your email</span>.
               </p>
-              <button type="button" class="secondary" data-payment-continue>
-                Continue shopping
+              <button class="secondary" type="button" data-payment-continue>
+                Continue browsing
               </button>
             </div>
           </section>
@@ -436,17 +451,17 @@
 
     <template id="book-card-template">
       <article class="book-card">
-        <div class="book-cover">
+        <div class="cover">
           <img data-book-image alt="" loading="lazy" />
         </div>
-        <div class="book-content">
+        <div class="details">
           <span class="badge" data-book-genre></span>
           <h3 data-book-title></h3>
-          <p class="book-author" data-book-author></p>
-          <p class="book-description" data-book-description></p>
+          <p class="author" data-book-author></p>
+          <p class="description" data-book-description></p>
           <div class="book-meta">
             <span class="price" data-book-price></span>
-            <button class="secondary" type="button" data-add-to-cart>Add to Cart</button>
+            <button class="secondary" type="button" data-add-to-cart>Add to cart</button>
           </div>
         </div>
       </article>
@@ -469,6 +484,6 @@
       </article>
     </template>
 
-    <script src="assets/js/app.js" type="module"></script>
+    <script type="module" src="assets/js/app.js"></script>
   </body>
 </html>

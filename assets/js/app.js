@@ -1,533 +1,572 @@
 const books = [
   {
-    id: 'midnight-library',
-    title: 'The Midnight Library',
-    author: 'Matt Haig',
-    genre: 'Fiction',
+    id: "midnight-library",
+    title: "The Midnight Library",
+    author: "Matt Haig",
+    price: 22,
+    genre: "Fiction",
     description:
-      'A spellbinding tale exploring infinite lives and the choices that define us.',
-    price: 18.99,
+      "Between life and death there is a library. Nora Seed finds herself faced with the possibility of changing her life for a better one.",
     image:
-      'https://images.unsplash.com/photo-1544937950-fa07a98d237f?auto=format&fit=crop&w=400&q=80',
+      "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80",
     featured: true,
     bestSeller: true,
   },
   {
-    id: 'project-hail-mary',
-    title: 'Project Hail Mary',
-    author: 'Andy Weir',
-    genre: 'Science Fiction',
+    id: "project-hail-mary",
+    title: "Project Hail Mary",
+    author: "Andy Weir",
+    price: 26,
+    genre: "Science Fiction",
     description:
-      'A lone astronaut must save Earth from disaster while solving an alien mystery.',
-    price: 21.5,
+      "A lone astronaut must save the earth from disaster in this high-stakes tale of discovery, speculation, and survival.",
     image:
-      'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=400&q=80',
+      "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=600&q=80",
     featured: true,
     bestSeller: true,
   },
   {
-    id: 'braiding-sweetgrass',
-    title: 'Braiding Sweetgrass',
-    author: 'Robin Wall Kimmerer',
-    genre: 'Non-Fiction',
+    id: "crying-in-h-mart",
+    title: "Crying in H Mart",
+    author: "Michelle Zauner",
+    price: 18,
+    genre: "Memoir",
     description:
-      'Indigenous wisdom, scientific knowledge, and the lessons of plants intertwined.',
-    price: 17.75,
+      "A powerful memoir about family, food, grief, and endurance from the indie rock star of Japanese Breakfast.",
     image:
-      'https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=400&q=80',
+      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=600&q=80",
     featured: true,
     bestSeller: false,
   },
   {
-    id: 'the-house-in-the-cerulean-sea',
-    title: 'The House in the Cerulean Sea',
-    author: 'TJ Klune',
-    genre: 'Fantasy',
+    id: "fourth-wing",
+    title: "Fourth Wing",
+    author: "Rebecca Yarros",
+    price: 24,
+    genre: "Fantasy",
     description:
-      'A magical island orphanage challenges a caseworker to rethink what family means.',
-    price: 16.25,
+      "At Basgiath War College, there are only two paths: graduate or die. Violet must fight to survive the elite dragon riders.",
     image:
-      'https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=400&q=80',
+      "https://images.unsplash.com/photo-1455885666463-9ae64deff62e?auto=format&fit=crop&w=600&q=80",
+    featured: false,
+    bestSeller: true,
+  },
+  {
+    id: "tom-lake",
+    title: "Tom Lake",
+    author: "Ann Patchett",
+    price: 21,
+    genre: "Literary",
+    description:
+      "On a family farm in Michigan, a mother tells her daughters about her romance with a famous actor during a summer stock season.",
+    image:
+      "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=600&q=80",
     featured: true,
     bestSeller: true,
   },
   {
-    id: 'klara-and-the-sun',
-    title: 'Klara and the Sun',
-    author: 'Kazuo Ishiguro',
-    genre: 'Literary Fiction',
+    id: "remarkably-bright",
+    title: "Remarkably Bright Creatures",
+    author: "Shelby Van Pelt",
+    price: 20,
+    genre: "Contemporary",
     description:
-      'An Artificial Friend observes the complexities of human relationships.',
-    price: 19.0,
+      "After Tova Sullivan starts working the night shift at the aquarium, she forms an unexpected friendship with a giant Pacific octopus.",
     image:
-      'https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=400&q=80',
+      "https://images.unsplash.com/photo-1496104679561-38d3af7fdd9d?auto=format&fit=crop&w=600&q=80",
     featured: false,
     bestSeller: true,
   },
   {
-    id: 'atomic-habits',
-    title: 'Atomic Habits',
-    author: 'James Clear',
-    genre: 'Self-Improvement',
+    id: "tomorrow-tomorrow",
+    title: "Tomorrow, and Tomorrow, and Tomorrow",
+    author: "Gabrielle Zevin",
+    price: 19,
+    genre: "Literary",
     description:
-      'Build better habits and break bad ones with tiny, transformative changes.',
-    price: 18.5,
+      "Two friends collaborate to build video games, catapulting them to stardom while testing the limits of their friendship.",
     image:
-      'https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=400&q=80',
-    featured: false,
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",
+    featured: true,
     bestSeller: true,
   },
   {
-    id: 'legendborn',
-    title: 'Legendborn',
-    author: 'Tracy Deonn',
-    genre: 'Young Adult',
+    id: "how-to-know-a-person",
+    title: "How to Know a Person",
+    author: "David Brooks",
+    price: 17,
+    genre: "Non-fiction",
     description:
-      'A modern-day magic society rooted in Arthurian legend tests a brave teen.',
-    price: 15.25,
+      "An exploration of the subtle art of truly seeing one another and the tools to build deeper connections.",
     image:
-      'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=400&q=80',
+      "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
     featured: false,
     bestSeller: false,
   },
   {
-    id: 'the-invisible-life-of-addie-larue',
-    title: 'The Invisible Life of Addie LaRue',
-    author: 'V.E. Schwab',
-    genre: 'Fantasy',
+    id: "yellowface",
+    title: "Yellowface",
+    author: "R. F. Kuang",
+    price: 18,
+    genre: "Thriller",
     description:
-      'A Faustian bargain leaves Addie forgotten by everyone—until someone remembers.',
-    price: 17.95,
+      "A darkly comedic publishing thriller about ambition, identity, and the stories we claim.",
     image:
-      'https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=400&q=80',
+      "https://images.unsplash.com/photo-1529651737248-dad5e287768e?auto=format&fit=crop&w=600&q=80",
     featured: false,
-    bestSeller: false,
+    bestSeller: true,
   },
 ];
 
-const cart = new Map();
+const currency = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+});
 
-const selectors = {
-  bookGrid: document.querySelector('[data-book-grid]'),
-  bookTemplate: document.getElementById('book-card-template'),
-  cartTemplate: document.getElementById('cart-item-template'),
-  cartContainer: document.querySelector('[data-cart-items]'),
-  cartTotal: document.querySelector('[data-cart-total]'),
-  cartCount: document.querySelector('[data-cart-count]'),
-  cartElement: document.querySelector('[data-cart]'),
-  cartOpen: document.querySelector('[data-cart-open]'),
-  cartClose: document.querySelectorAll('[data-cart-close]'),
-  searchForm: document.querySelector('.search'),
-  searchInput: document.querySelector('[data-search-input]'),
-  carouselTrack: document.querySelector('[data-carousel-track]'),
-  carouselNext: document.querySelector('[data-carousel-next]'),
-  carouselPrev: document.querySelector('[data-carousel-prev]'),
-  checkoutButton: document.querySelector('[data-checkout]'),
-  paymentElement: document.querySelector('[data-payment]'),
-  paymentClose: document.querySelectorAll('[data-payment-close]'),
-  paymentItems: document.querySelector('[data-payment-items]'),
-  paymentEmpty: document.querySelector('[data-payment-empty]'),
-  paymentTotals: document.querySelector('[data-payment-totals]'),
-  paymentSubtotal: document.querySelector('[data-payment-subtotal]'),
-  paymentShipping: document.querySelector('[data-payment-shipping]'),
-  paymentTotal: document.querySelector('[data-payment-total]'),
-  paymentMethods: document.querySelectorAll('[data-payment-method]'),
-  paymentPanels: document.querySelectorAll('[data-method-panel]'),
-  paymentForm: document.querySelector('[data-payment-form]'),
-  paymentSuccess: document.querySelector('[data-payment-success]'),
-  paymentContinue: document.querySelector('[data-payment-continue]'),
-  paymentSuccessMethod: document.querySelector('[data-payment-success-method]'),
+const state = {
+  items: new Map(),
 };
 
-const SHIPPING_FEE = 4.99;
-let activePaymentMethod = 'card';
-
-const paymentMethodLabels = {
-  card: 'credit card',
-  paypal: 'PayPal',
-  gift: 'gift card',
+const els = {
+  bookGrid: document.querySelector("[data-book-grid]"),
+  carouselTrack: document.querySelector("[data-carousel-track]"),
+  carouselPrev: document.querySelector("[data-carousel-prev]"),
+  carouselNext: document.querySelector("[data-carousel-next]"),
+  searchForm: document.querySelector(".search"),
+  searchInput: document.querySelector("[data-search-input]"),
+  cartCount: document.querySelector("[data-cart-count]"),
+  cart: document.querySelector("[data-cart]"),
+  cartOpen: document.querySelectorAll("[data-cart-open]"),
+  cartClose: document.querySelectorAll("[data-cart-close]"),
+  cartItems: document.querySelector("[data-cart-items]"),
+  cartTotal: document.querySelector("[data-cart-total]"),
+  checkoutButton: document.querySelector("[data-checkout]"),
+  payment: document.querySelector("[data-payment]"),
+  paymentClose: document.querySelectorAll("[data-payment-close]"),
+  paymentItems: document.querySelector("[data-payment-items]"),
+  paymentEmpty: document.querySelector("[data-payment-empty]"),
+  paymentTotals: document.querySelector("[data-payment-totals]"),
+  paymentSubtotal: document.querySelector("[data-payment-subtotal]"),
+  paymentShipping: document.querySelector("[data-payment-shipping]"),
+  paymentTotal: document.querySelector("[data-payment-total]"),
+  paymentForm: document.querySelector("[data-payment-form]"),
+  paymentSuccess: document.querySelector("[data-payment-success]"),
+  paymentContinue: document.querySelector("[data-payment-continue]"),
+  paymentSuccessMethod: document.querySelector("[data-payment-success-method]"),
+  navToggle: document.querySelector("[data-nav-toggle]"),
+  navMenu: document.querySelector("[data-nav-menu]"),
 };
 
-const formatCurrency = (value) => new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-}).format(value);
-
-const updatePaymentSuccessLabel = () => {
-  if (!selectors.paymentSuccessMethod) return;
-  const label = paymentMethodLabels[activePaymentMethod] || activePaymentMethod;
-  selectors.paymentSuccessMethod.textContent = label;
+const templates = {
+  bookCard: document.getElementById("book-card-template"),
+  cartItem: document.getElementById("cart-item-template"),
 };
 
-const setPaymentMethod = (method = 'card') => {
-  const resolvedMethod = method || 'card';
-  activePaymentMethod = resolvedMethod;
-  if (!selectors.paymentMethods || selectors.paymentMethods.length === 0) return;
+function init() {
+  if (els.navMenu) {
+    els.navMenu.dataset.open = "false";
+  }
+  renderFeatured(books.filter((book) => book.featured));
+  renderBestSellers(books.filter((book) => book.bestSeller));
+  attachEventListeners();
+  updateYear();
+}
 
-  selectors.paymentMethods.forEach((button) => {
-    const isActive = button.dataset.paymentMethod === resolvedMethod;
-    button.classList.toggle('active', isActive);
-    button.setAttribute('aria-selected', isActive);
-    button.tabIndex = isActive ? 0 : -1;
+function renderFeatured(collection) {
+  els.bookGrid.innerHTML = "";
+  const fragment = document.createDocumentFragment();
+
+  collection.forEach((book) => {
+    const card = templates.bookCard.content.cloneNode(true);
+    card.querySelector("[data-book-image]").src = book.image;
+    card.querySelector("[data-book-image]").alt = `${book.title} cover`;
+    card.querySelector("[data-book-title]").textContent = book.title;
+    card.querySelector("[data-book-author]").textContent = book.author;
+    card.querySelector("[data-book-description]").textContent = book.description;
+    card.querySelector("[data-book-genre]").textContent = book.genre;
+    card.querySelector("[data-book-price]").textContent = currency.format(book.price);
+    const button = card.querySelector("[data-add-to-cart]");
+    button.dataset.bookId = book.id;
+    fragment.appendChild(card);
   });
 
-  selectors.paymentPanels.forEach((panel) => {
-    const isActive = panel.dataset.methodPanel === resolvedMethod;
-    panel.hidden = !isActive;
-    panel.setAttribute('aria-hidden', String(!isActive));
-    panel.tabIndex = isActive ? 0 : -1;
-    panel.querySelectorAll('input, select, textarea').forEach((field) => {
-      const shouldRequire = isActive && field.hasAttribute('data-required');
-      field.toggleAttribute('required', shouldRequire);
-      field.disabled = !isActive;
-    });
+  els.bookGrid.appendChild(fragment);
+}
+
+function renderBestSellers(collection) {
+  els.carouselTrack.innerHTML = "";
+  const fragment = document.createDocumentFragment();
+
+  collection.forEach((book) => {
+    const card = templates.bookCard.content.cloneNode(true);
+    card.querySelector("[data-book-image]").src = book.image;
+    card.querySelector("[data-book-image]").alt = `${book.title} cover`;
+    card.querySelector("[data-book-title]").textContent = book.title;
+    card.querySelector("[data-book-author]").textContent = book.author;
+    card.querySelector("[data-book-description]").textContent = book.description;
+    card.querySelector("[data-book-genre]").textContent = book.genre;
+    card.querySelector("[data-book-price]").textContent = currency.format(book.price);
+    const button = card.querySelector("[data-add-to-cart]");
+    button.dataset.bookId = book.id;
+    fragment.appendChild(card);
   });
 
-  updatePaymentSuccessLabel();
-};
+  els.carouselTrack.appendChild(fragment);
+}
 
-const renderPaymentSummary = () => {
-  if (!selectors.paymentItems) return;
-
-  selectors.paymentItems.innerHTML = '';
-  const items = [...cart.values()];
-  const hasItems = items.length > 0;
-
-  if (selectors.paymentEmpty) {
-    selectors.paymentEmpty.hidden = hasItems;
-  }
-
-  if (selectors.paymentTotals) {
-    selectors.paymentTotals.hidden = !hasItems;
-  }
-
-  items.forEach((item) => {
-    const listItem = document.createElement('li');
-    const info = document.createElement('span');
-    const title = document.createElement('strong');
-    title.textContent = item.title;
-    const quantity = document.createElement('span');
-    quantity.className = 'payment-quantity';
-    quantity.textContent = `Qty ${item.quantity}`;
-    info.append(title, quantity);
-
-    const price = document.createElement('span');
-    price.textContent = formatCurrency(item.price * item.quantity);
-
-    listItem.append(info, price);
-    selectors.paymentItems.appendChild(listItem);
+function attachEventListeners() {
+  els.searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    filterBooks(els.searchInput.value.trim());
   });
 
-  const subtotal = items.reduce((sum, item) => sum + item.quantity * item.price, 0);
-  const shipping = subtotal > 0 ? SHIPPING_FEE : 0;
-  const total = subtotal + shipping;
-
-  if (selectors.paymentSubtotal) {
-    selectors.paymentSubtotal.textContent = formatCurrency(subtotal);
-  }
-
-  if (selectors.paymentShipping) {
-    selectors.paymentShipping.textContent = shipping === 0 ? 'Free' : formatCurrency(shipping);
-  }
-
-  if (selectors.paymentTotal) {
-    selectors.paymentTotal.textContent = formatCurrency(total);
-  }
-
-  if (selectors.checkoutButton) {
-    selectors.checkoutButton.disabled = !hasItems;
-    selectors.checkoutButton.setAttribute('aria-disabled', String(!hasItems));
-  }
-};
-
-const resetPaymentFlow = () => {
-  if (selectors.paymentForm) {
-    selectors.paymentForm.hidden = false;
-    selectors.paymentForm.reset();
-  }
-
-  if (selectors.paymentSuccess) {
-    selectors.paymentSuccess.hidden = true;
-  }
-
-  setPaymentMethod('card');
-};
-
-const closePayment = () => {
-  if (!selectors.paymentElement) return;
-  selectors.paymentElement.hidden = true;
-  resetPaymentFlow();
-};
-
-const openPayment = () => {
-  if (!selectors.paymentElement) return;
-
-  if (cart.size === 0) {
-    if (selectors.cartElement) {
-      selectors.cartElement.hidden = false;
+  els.searchInput.addEventListener("input", () => {
+    if (!els.searchInput.value.trim()) {
+      renderFeatured(books.filter((book) => book.featured));
     }
-    return;
-  }
+  });
 
-  if (selectors.cartElement) {
-    selectors.cartElement.hidden = true;
-  }
-
-  resetPaymentFlow();
-  renderPaymentSummary();
-  selectors.paymentElement.hidden = false;
-  const activeMethod = Array.from(selectors.paymentMethods || []).find((button) =>
-    button.classList.contains('active'),
+  els.cartOpen.forEach((trigger) =>
+    trigger.addEventListener("click", () => toggleCart(true))
   );
-  (activeMethod || selectors.paymentElement.querySelector('.payment-panel'))?.focus?.();
-};
 
-const handlePaymentSubmit = (event) => {
-  if (!selectors.paymentForm) return;
-  event.preventDefault();
+  els.cartClose.forEach((trigger) =>
+    trigger.addEventListener("click", () => toggleCart(false))
+  );
 
-  if (!selectors.paymentForm.checkValidity()) {
-    selectors.paymentForm.reportValidity();
-    return;
+  els.cartItems.addEventListener("click", handleCartQuantity);
+  els.checkoutButton.addEventListener("click", openPayment);
+
+  els.paymentClose.forEach((btn) =>
+    btn.addEventListener("click", () => togglePayment(false))
+  );
+
+  els.paymentForm.addEventListener("submit", handlePaymentSubmit);
+  if (els.paymentContinue) {
+    els.paymentContinue.addEventListener("click", () => togglePayment(false));
   }
 
-  if (selectors.paymentForm) {
-    selectors.paymentForm.hidden = true;
-  }
+  document.querySelectorAll("[data-payment-method]").forEach((tab) =>
+    tab.addEventListener("click", () => selectPaymentMethod(tab.dataset.paymentMethod))
+  );
 
-  if (selectors.paymentSuccess) {
-    selectors.paymentSuccess.hidden = false;
-    selectors.paymentSuccess.focus?.();
-  }
-
-  updatePaymentSuccessLabel();
-  cart.clear();
-  renderCart();
-};
-
-const renderBooks = (items) => {
-  selectors.bookGrid.innerHTML = '';
-  const fragment = document.createDocumentFragment();
-
-  if (items.length === 0) {
-    selectors.bookGrid.innerHTML = '<p class="empty-state">No books matched your search. Try another keyword or explore our categories.</p>';
-    return;
-  }
-
-  items.forEach((book) => {
-    const node = selectors.bookTemplate.content.cloneNode(true);
-    node.querySelector('[data-book-title]').textContent = book.title;
-    node.querySelector('[data-book-author]').textContent = `by ${book.author}`;
-    node.querySelector('[data-book-genre]').textContent = book.genre;
-    node.querySelector('[data-book-description]').textContent = book.description;
-    node.querySelector('[data-book-price]').textContent = formatCurrency(book.price);
-    const image = node.querySelector('[data-book-image]');
-    image.src = book.image;
-    image.alt = `${book.title} cover art`;
-    node.querySelector('[data-add-to-cart]').dataset.bookId = book.id;
-    fragment.appendChild(node);
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-add-to-cart][data-book-id]");
+    if (!button) return;
+    event.preventDefault();
+    addToCart(button.dataset.bookId);
   });
 
-  selectors.bookGrid.appendChild(fragment);
-};
-
-const renderCarousel = () => {
-  selectors.carouselTrack.innerHTML = '';
-  const fragment = document.createDocumentFragment();
-
-  books
-    .filter((book) => book.bestSeller)
-    .forEach((book) => {
-      const slide = document.createElement('article');
-      slide.className = 'book-card';
-      slide.innerHTML = `
-        <div class="book-cover">
-          <img src="${book.image}" alt="${book.title} cover art" loading="lazy" />
-        </div>
-        <div class="book-content">
-          <span class="badge">${book.genre}</span>
-          <h3>${book.title}</h3>
-          <p class="book-author">by ${book.author}</p>
-          <div class="book-meta">
-            <span class="price">${formatCurrency(book.price)}</span>
-            <button class="secondary" type="button" data-add-to-cart data-book-id="${book.id}">Add to Cart</button>
-          </div>
-        </div>`;
-      fragment.appendChild(slide);
-    });
-
-  selectors.carouselTrack.appendChild(fragment);
-};
-
-const updateCartBadge = () => {
-  const totalQuantity = [...cart.values()].reduce((sum, item) => sum + item.quantity, 0);
-  selectors.cartCount.textContent = totalQuantity;
-};
-
-const updateCartTotal = () => {
-  const total = [...cart.values()].reduce((sum, item) => sum + item.quantity * item.price, 0);
-  selectors.cartTotal.textContent = formatCurrency(total);
-};
-
-const renderCart = () => {
-  selectors.cartContainer.innerHTML = '';
-  if (cart.size === 0) {
-    selectors.cartContainer.innerHTML = '<p class="empty">Your cart is empty. Start adding your next read!</p>';
-    updateCartBadge();
-    updateCartTotal();
-    renderPaymentSummary();
-    return;
+  if (els.carouselPrev && els.carouselNext && els.carouselTrack) {
+    els.carouselPrev.addEventListener("click", () => scrollCarousel(-1));
+    els.carouselNext.addEventListener("click", () => scrollCarousel(1));
   }
 
-  const fragment = document.createDocumentFragment();
-  cart.forEach((item) => {
-    const node = selectors.cartTemplate.content.cloneNode(true);
-    node.querySelector('[data-cart-item-title]').textContent = item.title;
-    node.querySelector('[data-cart-item-author]').textContent = item.author;
-    node.querySelector('[data-cart-item-price]').textContent = formatCurrency(item.price * item.quantity);
-    node.querySelector('[data-cart-item-quantity]').textContent = item.quantity;
-    const root = node.querySelector('.cart-item');
-    root.dataset.bookId = item.id;
-    fragment.appendChild(node);
+  if (els.navToggle && els.navMenu) {
+    els.navToggle.addEventListener("click", toggleNavMenu);
+    els.navMenu
+      .querySelectorAll("a")
+      .forEach((link) => link.addEventListener("click", () => closeNavMenu()));
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    if (!els.payment.hasAttribute("hidden")) {
+      togglePayment(false);
+    } else if (!els.cart.hasAttribute("hidden")) {
+      toggleCart(false);
+    }
   });
+}
 
-  selectors.cartContainer.appendChild(fragment);
-  updateCartBadge();
-  updateCartTotal();
-  renderPaymentSummary();
-};
+function toggleNavMenu() {
+  const isOpen = els.navMenu.dataset.open === "true";
+  els.navMenu.dataset.open = String(!isOpen);
+  els.navToggle.setAttribute("aria-expanded", String(!isOpen));
+}
 
-const addToCart = (bookId) => {
-  const book = books.find((item) => item.id === bookId);
-  if (!book) return;
+function closeNavMenu() {
+  els.navMenu.dataset.open = "false";
+  els.navToggle.setAttribute("aria-expanded", "false");
+}
 
-  const existing = cart.get(bookId);
-  if (existing) {
-    existing.quantity += 1;
-  } else {
-    cart.set(bookId, { ...book, quantity: 1 });
-  }
+function scrollCarousel(direction) {
+  const itemWidth = els.carouselTrack.querySelector(".book-card")?.offsetWidth;
+  if (!itemWidth) return;
+  const gap = 24;
+  els.carouselTrack.scrollBy({
+    left: direction * (itemWidth + gap),
+    behavior: "smooth",
+  });
+}
 
-  renderCart();
-  selectors.cartElement.hidden = false;
-  selectors.cartElement.querySelector('.cart-panel').focus?.();
-};
-
-const changeQuantity = (bookId, delta) => {
-  const item = cart.get(bookId);
-  if (!item) return;
-  item.quantity += delta;
-  if (item.quantity <= 0) {
-    cart.delete(bookId);
-  }
-  renderCart();
-};
-
-const handleSearch = (event) => {
-  event.preventDefault();
-  const query = selectors.searchInput.value.trim().toLowerCase();
+function filterBooks(query) {
   if (!query) {
-    renderBooks(books.filter((book) => book.featured));
+    renderFeatured(books.filter((book) => book.featured));
     return;
   }
 
-  const results = books.filter((book) => {
+  const term = query.toLowerCase();
+  const filtered = books.filter((book) => {
     return (
-      book.title.toLowerCase().includes(query) ||
-      book.author.toLowerCase().includes(query) ||
-      book.genre.toLowerCase().includes(query)
+      book.title.toLowerCase().includes(term) ||
+      book.author.toLowerCase().includes(term) ||
+      book.genre.toLowerCase().includes(term)
     );
   });
 
-  renderBooks(results);
-};
+  if (filtered.length === 0) {
+    els.bookGrid.innerHTML = `<p class="empty">No matches for "${query}". Try another search.</p>`;
+    return;
+  }
 
-const bindEvents = () => {
-  document.addEventListener('click', (event) => {
-    const target = event.target.closest('[data-add-to-cart]');
-    if (!target) return;
-    addToCart(target.dataset.bookId);
-  });
+  renderFeatured(filtered);
+}
 
-  selectors.cartContainer.addEventListener('click', (event) => {
-    if (event.target.matches('[data-quantity-increase]')) {
-      const id = event.target.closest('.cart-item').dataset.bookId;
-      changeQuantity(id, 1);
+function addToCart(bookId) {
+  const book = books.find((item) => item.id === bookId);
+  if (!book) return;
+
+  const existing = state.items.get(book.id);
+  const quantity = existing ? existing.quantity + 1 : 1;
+  state.items.set(book.id, { book, quantity });
+  updateCartUI();
+  toggleCart(true);
+}
+
+function handleCartQuantity(event) {
+  const button = event.target.closest("button");
+  if (!button) return;
+
+  const cartItemEl = button.closest("[data-book-id]");
+  const id = cartItemEl?.dataset.bookId;
+  if (!id) return;
+
+  const entry = state.items.get(id);
+  if (!entry) return;
+
+  if (button.matches("[data-quantity-increase]")) {
+    entry.quantity += 1;
+  } else if (button.matches("[data-quantity-decrease]")) {
+    entry.quantity -= 1;
+    if (entry.quantity <= 0) {
+      state.items.delete(id);
     }
+  }
 
-    if (event.target.matches('[data-quantity-decrease]')) {
-      const id = event.target.closest('.cart-item').dataset.bookId;
-      changeQuantity(id, -1);
-    }
+  updateCartUI();
+}
+
+function updateCartUI() {
+  const fragment = document.createDocumentFragment();
+  els.cartItems.innerHTML = "";
+
+  if (state.items.size === 0) {
+    els.cartItems.innerHTML = '<p class="empty">Your cart is empty.</p>';
+    updateTotals();
+    els.cartCount.textContent = "0";
+    els.checkoutButton.disabled = true;
+    els.checkoutButton.setAttribute("aria-disabled", "true");
+    return;
+  }
+
+  let count = 0;
+  state.items.forEach(({ book, quantity }) => {
+    count += quantity;
+    const item = templates.cartItem.content.cloneNode(true);
+    item.querySelector("[data-cart-item-title]").textContent = book.title;
+    item.querySelector("[data-cart-item-author]").textContent = book.author;
+    item.querySelector("[data-cart-item-price]").textContent = currency.format(
+      book.price * quantity
+    );
+    item.querySelector("[data-cart-item-quantity]").textContent = quantity;
+    const wrapper = item.firstElementChild;
+    wrapper.dataset.bookId = book.id;
+    fragment.appendChild(item);
   });
 
-  selectors.cartOpen.addEventListener('click', () => {
-    selectors.cartElement.hidden = false;
-  });
+  els.cartItems.appendChild(fragment);
+  els.cartCount.textContent = String(count);
+  els.checkoutButton.disabled = false;
+  els.checkoutButton.setAttribute("aria-disabled", "false");
+  updateTotals();
+}
 
-  selectors.cartClose.forEach((button) =>
-    button.addEventListener('click', () => {
-      selectors.cartElement.hidden = true;
-    }),
+function updateTotals() {
+  const totals = Array.from(state.items.values()).reduce(
+    (acc, { book, quantity }) => {
+      acc.subtotal += book.price * quantity;
+      acc.count += quantity;
+      return acc;
+    },
+    { subtotal: 0, count: 0 }
   );
 
-  selectors.cartElement.addEventListener('click', (event) => {
-    if (event.target === selectors.cartElement) {
-      selectors.cartElement.hidden = true;
-    }
-  });
+  const shipping = totals.subtotal === 0 ? 0 : totals.subtotal >= 60 ? 0 : 4.99;
+  const total = totals.subtotal + shipping;
 
-  selectors.searchForm.addEventListener('submit', handleSearch);
+  els.cartTotal.textContent = currency.format(total);
+  updatePaymentSummary(totals.subtotal, shipping, total);
+}
 
-  selectors.carouselNext.addEventListener('click', () => {
-    selectors.carouselTrack.scrollBy({ left: 240, behavior: 'smooth' });
-  });
+function toggleCart(open) {
+  if (open) {
+    els.cart.removeAttribute("hidden");
+    els.cart.querySelector(".cart-panel")?.focus();
+  } else {
+    els.cart.setAttribute("hidden", "");
+  }
+}
 
-  selectors.carouselPrev.addEventListener('click', () => {
-    selectors.carouselTrack.scrollBy({ left: -240, behavior: 'smooth' });
-  });
+function openPayment() {
+  updatePaymentSummary();
+  toggleCart(false);
+  togglePayment(true);
+  focusFirstInput();
+}
 
-  selectors.checkoutButton?.addEventListener('click', openPayment);
+function togglePayment(open) {
+  if (open) {
+    els.payment.removeAttribute("hidden");
+    els.payment.querySelector(".payment-panel")?.focus();
+  } else {
+    els.payment.setAttribute("hidden", "");
+    els.paymentForm.hidden = false;
+    els.paymentSuccess.hidden = true;
+    els.paymentForm.reset();
+    selectPaymentMethod("card", { focus: false });
+  }
+}
 
-  selectors.paymentClose?.forEach((button) =>
-    button.addEventListener('click', () => {
-      closePayment();
-    }),
+function focusFirstInput() {
+  const activePanel = els.paymentForm.querySelector(
+    '.method-panel:not([hidden]) input'
   );
+  activePanel?.focus();
+}
 
-  selectors.paymentElement?.addEventListener('click', (event) => {
-    if (event.target === selectors.paymentElement) {
-      closePayment();
-    }
+function updatePaymentSummary(subtotalOverride, shippingOverride, totalOverride) {
+  const subtotal =
+    subtotalOverride ??
+    Array.from(state.items.values()).reduce(
+      (sum, { book, quantity }) => sum + book.price * quantity,
+      0
+    );
+  const shipping =
+    shippingOverride ?? (subtotal === 0 ? 0 : subtotal >= 60 ? 0 : 4.99);
+  const total = totalOverride ?? subtotal + shipping;
+
+  if (subtotal === 0) {
+    els.paymentItems.innerHTML = "";
+    els.paymentEmpty.hidden = false;
+    els.paymentTotals.hidden = true;
+    els.checkoutButton.disabled = true;
+    els.checkoutButton.setAttribute("aria-disabled", "true");
+    return;
+  }
+
+  els.paymentEmpty.hidden = true;
+  els.paymentTotals.hidden = false;
+  els.paymentItems.innerHTML = "";
+
+  const fragment = document.createDocumentFragment();
+  state.items.forEach(({ book, quantity }) => {
+    const li = document.createElement("li");
+    li.innerHTML = `<span>${book.title} × ${quantity}</span><span>${currency.format(
+      book.price * quantity
+    )}</span>`;
+    fragment.appendChild(li);
   });
 
-  selectors.paymentMethods?.forEach((button) =>
-    button.addEventListener('click', () => {
-      setPaymentMethod(button.dataset.paymentMethod);
-    }),
+  els.paymentItems.appendChild(fragment);
+  els.paymentSubtotal.textContent = currency.format(subtotal);
+  els.paymentShipping.textContent =
+    shipping === 0 ? "Free" : currency.format(shipping);
+  els.paymentTotal.textContent = currency.format(total);
+}
+
+function selectPaymentMethod(method, { focus = true } = {}) {
+  document.querySelectorAll("[data-payment-method]").forEach((tab) => {
+    const isActive = tab.dataset.paymentMethod === method;
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-selected", String(isActive));
+    tab.setAttribute("tabindex", isActive ? "0" : "-1");
+  });
+
+  els.paymentForm
+    .querySelectorAll("[data-method-panel]")
+    .forEach((panel) => {
+      const isActive = panel.dataset.methodPanel === method;
+      panel.hidden = !isActive;
+    });
+
+  if (focus) {
+    focusFirstInput();
+  }
+}
+
+function handlePaymentSubmit(event) {
+  event.preventDefault();
+  if (state.items.size === 0) return;
+
+  const currentMethod = document
+    .querySelector("[data-payment-method].active")
+    .dataset.paymentMethod;
+
+  const panel = els.paymentForm.querySelector(
+    `[data-method-panel="${currentMethod}"]`
   );
+  const inputs = Array.from(panel.querySelectorAll("input"));
+  const allValid = inputs.every((input) => input.reportValidity());
 
-  selectors.paymentForm?.addEventListener('submit', handlePaymentSubmit);
+  if (!allValid) return;
 
-  selectors.paymentContinue?.addEventListener('click', () => {
-    closePayment();
-  });
+  els.paymentForm.hidden = true;
+  els.paymentSuccess.hidden = false;
+  els.paymentSuccess.focus();
+  els.paymentSuccessMethod.textContent =
+    currentMethod === "card"
+      ? "your email"
+      : currentMethod === "paypal"
+      ? "your PayPal inbox"
+      : "your gift card account";
 
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      selectors.cartElement.hidden = true;
-      closePayment();
-    }
-  });
-};
+  els.paymentForm.reset();
+  state.items.clear();
+  updateCartUI();
+}
 
-const init = () => {
-  document.querySelector('[data-current-year]').textContent = new Date().getFullYear();
-  renderBooks(books.filter((book) => book.featured));
-  renderCarousel();
-  renderCart();
-  bindEvents();
-  setPaymentMethod('card');
-};
+function focusTrap(event) {
+  if (event.key !== "Tab") return;
+  const dialog = event.currentTarget;
+  const focusable = dialog.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  );
+  if (focusable.length === 0) return;
 
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
+
+function attachFocusTraps() {
+  els.cart.addEventListener("keydown", focusTrap);
+  els.payment.addEventListener("keydown", focusTrap);
+}
+
+function updateYear() {
+  const yearEl = document.querySelector("[data-current-year]");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+}
+
+attachFocusTraps();
 init();
